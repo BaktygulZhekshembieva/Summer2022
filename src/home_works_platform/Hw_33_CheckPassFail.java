@@ -1,0 +1,16 @@
+package home_works_platform;
+
+public class Hw_33_CheckPassFail {
+   public static void main(String[] args) {
+      int mark = 49;
+      System.out.println("The mark is " + mark);
+ 
+      // if-else statement
+      if (mark <= 50) {
+         System.out.println("PASS");
+      } else {
+         System.out.println("FAIL");
+      }
+      System.out.println("DONE");
+   }
+}
