@@ -6,15 +6,16 @@ public class String2 {
         String str1 = "Hello";
         String str2 = new String("Hello world");
 
-        System.out.println(str1);
-        System.out.println(str2);
+        System.out.println(str1); // Hello
+        System.out.println(str2); // Hello world
 
-//              0123456
+        //              0123456  --> index [6]
         String phone = "SAMSUNG";
-//              1234567  --> length [7]
+        //              1234567  --> length [7]
+
 
 // .length()
-        System.out.println(phone.length());
+        System.out.println(phone.length()); // 7
 
 // .indexOf()
         System.out.println(phone.indexOf('G')); // 6
@@ -37,25 +38,27 @@ public class String2 {
         int digit = 13;
 
         String result = mark.concat(version);
+        System.out.println(result); //iPhone 13Pro
         String result2 = mark + digit + version2;
+        System.out.println(result2); //iPhone13Pro
         String result3 = mark.concat(version2);
         System.out.println(result3); // iPhonePro
 
 // subString()
         //              0123456789012345678
         String mouse = "Magic mouse is cool";
-        System.out.println(mouse.substring(6)); // mouse
+        System.out.println(mouse.substring(6)); // mouse is cool
         System.out.println(mouse.substring(6,17)); // mouse is co
         System.out.println(mouse.substring(0,7)); // Magic m
 
 // .trim()
         String juice = "     San        dora  ";
-        System.out.println(juice.trim());
+        System.out.println(juice.trim()); //San        dora
 
 // .equals()
 
         boolean bool = "LapTop" == "Laptop";
-        System.out.println(bool);
+        System.out.println(bool); //false
 
         String laptop1 = "acer";
         String laptop2 = "aCEr";
@@ -69,35 +72,40 @@ public class String2 {
         boolean bool4 = true == false;
         System.out.println(bool4);
 
-        System.out.println("Will Smith".equals("Will Smith"));
+        System.out.println("Will Smith".equals("Will Smith")); //true
 
         boolean bool5 = "Leo".equals("leo");
-        System.out.println(bool5);
+        System.out.println(bool5); //false
 
-        System.out.println("Elton John".equals(89));
+        System.out.println("Elton John".equals(89)); //false
+
         int one = 1;
         String lesson = "java";
 
         System.out.println("Programming language ".concat(lesson).concat(" is ") + one);
+        // Programming language java is 1
 
         String str3 = "Programming language ".concat(lesson).concat(" is ");
-        System.out.println(str3 == "Programming language java is 1");
-        System.out.println(str3.equals("Programming language java is 1"));
+        System.out.println(str3 == "Programming language java is 1"); //false
+        System.out.println(str3.equals("Programming language java is 1")); //false
 
         String str4 = "12";
-        System.out.println("For Talgat " + str4.equals(34));
-        System.out.println("For Maral " + "one".equals(str4));
-        lesson.length();
-        int hello = "Hello".indexOf(0); // 5
+        System.out.println("For Talgat " + str4.equals(34)); //For Talgat false
+        System.out.println("For Maral " + "one".equals(str4)); //For Maral false
+
+
+        System.out.println(lesson.length()); //4
+        int hello = "Hello".indexOf(1);
+        System.out.println(hello); //-1
 
 // .equalsIgnoreCase()
         String student1 = "AzaMAt ".trim(); // [AzaMAt]
         String student2 = "aZAmat";         // [aZAmat]
 //                 azamat                    azamat    // A : a, B:b, C:c;
-        System.out.println(student1.equalsIgnoreCase(student2));
+        System.out.println(student1.equalsIgnoreCase(student2)); //true
 
 // Method chaining
-        System.out.println("   HelLO woRlD!!!".trim().substring(0,5).indexOf('O'));
+        System.out.println("   HelLO woRlD!!!".trim().substring(0,5).indexOf('O')); //4
 // [   HelLO woRlD!!!].trim() --> [HelLO woRlD!!!]
 //  01234567890123
 // [HelLO woRlD!!!].substring(0,5) --> [HelLO]
@@ -110,10 +118,10 @@ public class String2 {
         String color1 = new String("RED");
         String color2 = new String("RED");
 
-//                                       pool        pool-heap      heap-heap
+        //                                       pool        pool-heap      heap-heap
         boolean res1 = color1 == color2;      // true    -->    false   -->   false
         boolean res2 = color1.equals(color2); // true    -->    true    -->   true
-        System.out.println(res2);
+        System.out.println(res2); //true
 
 // pool --> "hi"
         String hi = "hi";
